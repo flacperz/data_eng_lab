@@ -1,0 +1,33 @@
+# --- Datos y Warehouse (Apache Iceberg) ---
+# No queremos subir los archivos Parquet o metadatos locales a Git
+warehouse/
+events/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+
+# --- Docker ---
+# Si usas archivos .env para credenciales, nunca deben subirse
+.env
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+.cache/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/

@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  spark-iceberg:
+    # user: "${UID}:${GID}"
+    build: .
+    ports:
+      - "8888:8888"
+    container_name: konfio_pipeline
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./warehouse:/app/warehouse
+      - ./events:/app/events
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HOME=/app
+      # - JAVA_HOME=/opt/java/openjdk
+      # - SPARK_HOME=/usr/local/lib/python3.10/dist-packages/pyspark
+      # - SPARK_LOCAL_DIRS=/app/tmp/spark
+      # - _JAVA_OPTIONS=-Djava.io.tmpdir=/app/tmp/java
+      # - PYSPARK_PYTHON=python3
+    tty: true  # Mantiene el contenedor abierto
+    stdin_open: true
