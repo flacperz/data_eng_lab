@@ -20,7 +20,6 @@ El flujo de datos se divide en tres capas lógicas autocontenidas:
 
 * **Python 3.10** & **PySpark (Spark 3.x)**
 * **Apache Iceberg** (Formato de tabla abierto para almacenamiento ACID de alto rendimiento)
-* **Apache Kafka & Zookeeper** (Streaming de eventos y Change Data Capture orientado a eventos)
 * **Docker & Docker Compose** (Para la containerización completa del entorno local)
 * **Jupyter Notebook** (Para análisis exploratorio y auditoría)
 
@@ -68,7 +67,7 @@ El flujo de datos se divide en tres capas lógicas autocontenidas:
 
 1. Clonar repositorio desde la ruta proporcionada.
 2. Renombar archivo .env.example como .env para que el servicio se inicie y cargue variables de entorno.
-3. Entrar a carpeta base y ejectuar **docker compose up --build -d**
+3. Entrar a carpeta base y ejectuar **docker compose up --build**
 
 
 ## Resultados Esperados
