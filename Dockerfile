@@ -21,5 +21,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiamos el resto del proyecto
 COPY . /app
 
-# CMD ["python", "src/main.py"]
-CMD ["bash"]
+CMD ["python", "main.py"]
+# CMD ["bash"]
