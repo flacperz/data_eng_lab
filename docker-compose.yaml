@@ -6,7 +6,7 @@ services:
     ports:
       - "8888:8888"
     container_name: konfio_pipeline
-    restart: unless-stopped
+    # restart: unless-stopped
     env_file:
       - .env
     volumes:
